@@ -40,8 +40,13 @@ body {
     opacity: 0;
     z-index: 5;
     width: 200px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     transition: 0.5s;
+
+    .sport {
+      margin-right: 5px;
+    }
   }
 }
 
@@ -53,7 +58,7 @@ body {
     border-radius: 200px;
     width: 200px;
     height: 200px;
-    transition: 1s;
+    transition: 2s;
   }
 
   .rank {
@@ -63,6 +68,7 @@ body {
     border-radius: 50%;
     padding: 6.2px 11.5px;
     background-color: white;
+    color: #8b0000;
   }
 }
 
@@ -74,7 +80,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  transition: 1s;
   z-index: -2;
 }
 
@@ -84,7 +89,7 @@ body {
   right: -8px;
   bottom: -33px;
   background: #eeee;
-  transition: 1s;
+  border-radius: 10px;
 }
 
 .person:hover {
