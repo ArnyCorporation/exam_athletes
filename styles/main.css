@@ -23,7 +23,9 @@ body {
   grid-template-columns: repeat(4, 200px); }
 
 .person {
-  position: relative; }
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s; }
   .person .details {
     text-align: center;
     color: #2f4f4f;
@@ -39,7 +41,26 @@ body {
     opacity: 0;
     z-index: 5;
     width: 200px;
-    text-align: center; }
+    text-align: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+
+.photo {
+  position: relative;
+  z-index: -1; }
+  .photo img {
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+    -webkit-transition: 1s;
+    transition: 1s; }
+  .photo .rank {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 6.2px 11.5px;
+    background-color: white; }
 
 .person::after {
   content: "";
@@ -53,31 +74,20 @@ body {
   transition: 1s;
   z-index: -2; }
 
-.photo {
-  position: relative;
-  z-index: -1; }
-  .photo img {
-    border-radius: 200px;
-    width: 200px;
-    height: 200px; }
-  .photo .rank {
-    position: absolute;
-    top: 80px;
-    right: 10px;
-    border-radius: 50%;
-    padding: 6.2px 11.5px;
-    background-color: white; }
-
 .person:hover::after {
   left: -8px;
   top: -8px;
   right: -8px;
   bottom: -33px;
-  background: #eeee; }
+  background: #eeee;
+  -webkit-transition: 1s;
+  transition: 1s; }
 
 .person:hover {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2); }
+          transform: scale(1.2);
+  -webkit-transition: 1s;
+  transition: 1s; }
   .person:hover img {
     -webkit-transition: 1s;
     transition: 1s;
