@@ -41,9 +41,16 @@ body {
     opacity: 0;
     z-index: 5;
     width: 200px;
-    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
+    .person .extra .sport {
+      margin-right: 5px; }
 
 .photo {
   position: relative;
@@ -52,15 +59,16 @@ body {
     border-radius: 200px;
     width: 200px;
     height: 200px;
-    -webkit-transition: 1s;
-    transition: 1s; }
+    -webkit-transition: 2s;
+    transition: 2s; }
   .photo .rank {
     position: absolute;
     top: 80px;
     right: 10px;
     border-radius: 50%;
     padding: 6.2px 11.5px;
-    background-color: white; }
+    background-color: white;
+    color: #8b0000; }
 
 .person::after {
   content: "";
@@ -70,8 +78,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
   z-index: -2; }
 
 .person:hover::after {
@@ -80,8 +86,7 @@ body {
   right: -8px;
   bottom: -33px;
   background: #eeee;
-  -webkit-transition: 1s;
-  transition: 1s; }
+  border-radius: 10px; }
 
 .person:hover {
   -webkit-transform: scale(1.2);
